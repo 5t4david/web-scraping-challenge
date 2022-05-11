@@ -47,7 +47,7 @@ def scrape():
     tables = pd.read_html(url)
     fact_df = tables[1]
     fact_df=fact_df.rename(columns={0:"Features",1:"Value"})
-    Mars_facts = fact_df.to_html()
+    Mars_facts = fact_df.to_html(index=False)
 
 
     im_url='https://marshemispheres.com/'
